@@ -1,0 +1,14 @@
+{
+  "name": "tech-challenge",
+  "version": "1.0.0",
+  "description": "tech challenge in js for tshirt ventures",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "julian scharf",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
