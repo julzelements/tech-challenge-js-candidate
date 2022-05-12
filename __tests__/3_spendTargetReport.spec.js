@@ -1,6 +1,6 @@
 const invoices = require("../data/invoices");
 const plan = require("../data/plan");
-const spendTargetReport = require("../src/spendTargetReport");
+const spendTargetReport = require("../src/3_spendTargetReport");
 
 const expected = [
   {

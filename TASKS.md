@@ -18,7 +18,9 @@ Our web app needs to display some reports which you are about to build with us. 
 In the `__tests__` directory, there are some tests that are ready to go.
 Run the tests with `yarn test`
 
-# Task 1:
+# Task 1: Totals Report
+[1_totalsReport.js](./src/1_totalsReport.js) |
+[1_totalsReport.spec.js](./__tests__/1_totalsReport.spec.js)
 
 Our participants need a budget summary.
 Produce the following summary for all the invoices:
@@ -31,7 +33,9 @@ Produce the following summary for all the invoices:
 }
 ```
 
-# Task 2:
+# Task 2: Category Report
+[2_categoryReport.js](./src/2_categoryReport.js) |
+[2_categoryReport.spec.js](./__tests__/2_categoryReport.spec.js)
 
 We just realised we need to display the individual categories too!
 Produce the following summary for 3 months of invoices:
@@ -61,8 +65,9 @@ Produce the following summary for 3 months of invoices:
   },
 ];
 ```
-
-# Task 3
+# Task 3: 
+[3_spendTargetReport.js](./src/3_spendTargetReport.js) |
+[3_spendTargetReport.spec.js](./__tests__/3_spendTargetReport.spec.js)
 
 The plan budget is for 12 months.
 The invoices are for January, February and March.

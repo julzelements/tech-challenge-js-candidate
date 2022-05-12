@@ -1,6 +1,6 @@
 const invoices = require("../data/invoices");
 const plan = require("../data/plan");
-const totalsReport = require("../src/totalsReport");
+const totalsReport = require("../src/1_totalsReport");
 
 const expected = {
   initialBudget: 8760,
