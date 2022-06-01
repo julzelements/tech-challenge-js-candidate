@@ -1,16 +1,17 @@
 import invoices from "./testData/invoices";
 import plan from "./testData/plan";
 import spendTargetReport from "../3_spendTargetReport";
+import { SpendTargetReport, TargetCategory } from "../types";
 
 
-const expected = [
+const expected: SpendTargetReport[] = [
   {
     category: "Core Supports",
     categorySpend: 1380,
     code: 1,
     initialBudget: 4800,
     remainingBudget: 3420,
-    target: "OVERSPEND",
+    target: TargetCategory.OVERSPEND,
   },
   {
     category: "Home Care",
@@ -18,7 +19,7 @@ const expected = [
     code: 3,
     initialBudget: 2400,
     remainingBudget: 1782,
-    target: "ON_TRACK",
+    target: TargetCategory.ON_TRACK,
   },
   {
     category: "transport",
@@ -26,7 +27,7 @@ const expected = [
     code: 15,
     initialBudget: 1560,
     remainingBudget: 1248,
-    target: "UNDERSPEND",
+    target: TargetCategory.UNDERSPEND,
   },
 ];
 
