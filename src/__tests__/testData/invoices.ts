@@ -49,4 +49,4 @@ const invoices = [
   },
 ];
 
-module.exports = invoices;
+export default invoices;
