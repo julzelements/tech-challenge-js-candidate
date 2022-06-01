@@ -1,31 +1,34 @@
 const invoices = require("../data/invoices");
 const plan = require("../data/plan");
-const categoryReport = require("../src/2_categoryReport");
+const spendTargetReport = require("../src/3_spendTargetReport");
 
 const expected = [
   {
     category: "Core Supports",
+    categorySpend: 1380,
     code: 1,
     initialBudget: 4800,
-    categorySpend: 1380,
     remainingBudget: 3420,
+    target: "OVERSPEND",
   },
   {
     category: "Home Care",
+    categorySpend: 618,
     code: 3,
     initialBudget: 2400,
-    categorySpend: 618,
     remainingBudget: 1782,
+    target: "ON_TRACK",
   },
   {
     category: "transport",
+    categorySpend: 312,
     code: 15,
     initialBudget: 1560,
-    categorySpend: 312,
     remainingBudget: 1248,
+    target: "UNDERSPEND",
   },
 ];
 
-test.skip("category totals report", () => {
-  expect(categoryReport(plan, invoices)).toStrictEqual(expected);
+test("spend target report", () => {
+  expect(spendTargetReport(plan, invoices)).toStrictEqual(expected);
 });
