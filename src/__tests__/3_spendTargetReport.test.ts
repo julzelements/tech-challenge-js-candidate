@@ -1,10 +1,10 @@
 import invoices from "./testData/invoices";
 import plan from "./testData/plan";
 import spendTargetReport from "../3_spendTargetReport";
-import { SpendTargetReport, TargetCategory } from "../types";
+import { SpendTargetReportItem, TargetCategory } from "../types";
 
 
-const expected: SpendTargetReport[] = [
+const expected: SpendTargetReportItem[] = [
   {
     category: "Core Supports",
     categorySpend: 1380,

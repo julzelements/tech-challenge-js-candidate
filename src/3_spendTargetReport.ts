@@ -1,6 +1,6 @@
-import { Invoice, Plan, SpendTargetReport } from "./types";
+import { Invoice, Plan, SpendTargetReportItem, TargetCategory } from "./types";
 
-const spendTargetReport = (plan: Plan, invoices: Invoice[]): SpendTargetReport[] => {
+const spendTargetReport = (plan: Plan, invoices: Invoice[]): SpendTargetReportItem[] => {
     /**
      * TODO
      * 
@@ -43,6 +43,7 @@ const spendTargetReport = (plan: Plan, invoices: Invoice[]): SpendTargetReport[]
      * Run `npm test` to test your solution
      * 
      */
+
     return null;
 };
 

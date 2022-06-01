@@ -25,7 +25,7 @@ export enum Month {
     MAR = "MAR"
 };
 
-export interface SpendTargetReport {
+export interface SpendTargetReportItem {
     category: string,
     categorySpend: number,
     code: number,
