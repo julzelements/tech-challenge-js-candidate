@@ -1,5 +1,5 @@
-const invoices = require("../data/invoices");
-const plan = require("../data/plan");
+import invoices from "./testData/invoices";
+import plan from "./testData/plan";
 
 test("should import invoices", () => {
   expect(invoices[0].date).toBe("JAN");

@@ -1,3 +1,5 @@
-const spendTargetReport = (plan, invoices) => {};
+const spendTargetReport = (plan, invoices) => {
+    
+};
 
-module.exports = spendTargetReport;
+export default spendTargetReport;
