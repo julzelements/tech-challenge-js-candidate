@@ -1,15 +1,17 @@
-const invoices = require("../data/invoices");
-const plan = require("../data/plan");
-const spendTargetReport = require("../src/3_spendTargetReport");
+import invoices from "./testData/invoices";
+import plan from "./testData/plan";
+import spendTargetReport from "../3_spendTargetReport";
+import { SpendTargetReportItem, TargetCategory } from "../types";
 
-const expected = [
+
+const expected: SpendTargetReportItem[] = [
   {
     category: "Core Supports",
     categorySpend: 1380,
     code: 1,
     initialBudget: 4800,
     remainingBudget: 3420,
-    target: "OVERSPEND",
+    target: TargetCategory.OVERSPEND,
   },
   {
     category: "Home Care",
@@ -17,7 +19,7 @@ const expected = [
     code: 3,
     initialBudget: 2400,
     remainingBudget: 1782,
-    target: "ON_TRACK",
+    target: TargetCategory.ON_TRACK,
   },
   {
     category: "transport",
@@ -25,10 +27,11 @@ const expected = [
     code: 15,
     initialBudget: 1560,
     remainingBudget: 1248,
-    target: "UNDERSPEND",
+    target: TargetCategory.UNDERSPEND,
   },
 ];
 
-test.skip("spend target report", () => {
+test("spend target report", () => {
   expect(spendTargetReport(plan, invoices)).toStrictEqual(expected);
 });
+

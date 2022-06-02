@@ -1,52 +1,54 @@
-const invoices = [
+import { Invoice, Month } from "../../types";
+
+const invoices: Invoice[] = [
   {
     provider: "George's shopping services",
-    date: "JAN",
-    total: 445,
+    date: Month.JAN,
+    amount: 445,
     code: 1,
   },
   {
     provider: "George's shopping services",
-    date: "FEB",
-    total: 392,
+    date: Month.FEB,
+    amount: 392,
     code: 1,
   },
   {
     provider: "George's shopping services",
-    date: "MAR",
-    total: 543,
+    date: Month.MAR,
+    amount: 543,
     code: 1,
   },
   {
     provider: "Ability co support services",
-    date: "JAN",
-    total: 237,
+    date: Month.JAN,
+    amount: 237,
     code: 3,
   },
   {
     provider: "Ability co support services",
-    date: "FEB",
-    total: 136,
+    date: Month.FEB,
+    amount: 136,
     code: 3,
   },
   {
     provider: "Ability co support services",
-    date: "MAR",
-    total: 245,
+    date: Month.MAR,
+    amount: 245,
     code: 3,
   },
   {
     provider: "Uber",
-    date: "JAN",
-    total: 174,
+    date: Month.JAN,
+    amount: 174,
     code: 15,
   },
   {
     provider: "CabCharge",
-    date: "JAN",
-    total: 138,
+    date: Month.JAN,
+    amount: 138,
     code: 15,
   },
 ];
 
-module.exports = invoices;
+export default invoices;
