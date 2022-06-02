@@ -2,30 +2,42 @@
 
 Hey! Congrats on the interview progress!
 
-This is a quick intro to the next stage.
+We need your help to get our tests passing.
 
-You will be pairing with Julian and Alan for a 1 hour session.
-Together, we will build a simple little invoice processor.
+While doing this. Remember to:
+- Share your thoughts and think the problem out aloud.
+- Ask clarifying questions to make sure you are building the correct thing.
 
-This is not a test to see how much syntax you know. If you get stuck, ask us for help. If you forget a built-in javascript function, just google it. Heck, we that every day right?
+You can get the tests passing by implementing [3_spendTargetReport.ts](./src/3_spendTargetReport.ts) to convert a plan and invoices into a spending report for the period JAN through MAR. 
 
-We are focusing on two things:
-Can you collaborate?
-Can you code?
+The report will tell us whether we have under spent, over spent or on track for each of the plan items.
 
-You can demonstrate good collaboration by:
-
-- Sharing your thoughts and thinking the problem out aloud.
-- Asking clarifying questions to make sure you are building the correct thing.
-- Being humble and cooperative.
-
-You can demonstrate good coding ability by:
-
-- Knowing your way around your IDE.
-- Debugging and fixing your code as you go.
-- Breaking the problem into small solvable chunks.
-- Writing tests.
-
-Let's go into this together with an open mind. A good interview is like a frank exchange of ideas, we can both learn something from each other. This is a great opportunity for you to see what it's like to work with us too! There aren't many things that get built here without some collaboration. 😀
-
-The project installation and actual test instructions are in [TASKS.md](./TASKS.md)
+For example:
+```js
+[
+    {
+        category: "Core Supports",
+        categorySpend: 1380,
+        code: 1,
+        initialBudget: 4800,
+        remainingBudget: 3420,
+        target: "OVERSPEND",
+    },
+    {
+        category: "Home Care",
+        categorySpend: 618,
+        code: 3,
+        initialBudget: 2400,
+        remainingBudget: 1782,
+        target: "ON_TRACK",
+    },
+    {
+        category: "transport",
+        categorySpend: 312,
+        code: 15,
+        initialBudget: 1560,
+        remainingBudget: 1248,
+        target: "UNDERSPEND",
+    },
+];
+```
