@@ -1,31 +1,83 @@
-# TShirt Ventures tech exercise
+# Introduction
 
-Hey! Congrats on the interview progress!
+At TShirt Ventures, we help participants manage their National Disabilty Insurance Scheme funds. 
+NDIS particpants have a funding plan which specifies which funds can be spent in which categories.
+A plan specifies funds for a 12 month period.
+Funds do not carry over into the next year, ideally a participant will spend all thier money in each category by the end of the year.
+We help our participants track the fund spending over time, to see if they are over spending or underspending.
 
-This is a quick intro to the next stage.
 
-You will be pairing with Julian and Alan for a 1 hour session.
-Together, we will build a simple little invoice processor.
+In the `/data` directory there are two files.
 
-This is not a test to see how much syntax you know. If you get stuck, ask us for help. If you forget a built-in javascript function, just google it. Heck, we that every day right?
+- `plan.js` has a participants plan.
+- `invoices.js` has that invoices that have been incurred against that participant.
 
-We are focusing on two things:
-Can you collaborate?
-Can you code?
+# Task 1: Category Totals Report
 
-You can demonstrate good collaboration by:
+Our participants need a budget summary.
+This will help them see how much they have spent and how much they have left in thier plan.
+They also need to track the spending in each category, so they do not overspend or underspend in each category.
 
-- Sharing your thoughts and thinking the problem out aloud.
-- Asking clarifying questions to make sure you are building the correct thing.
-- Being humble and cooperative.
+Produce the following summary for all the invoices:
 
-You can demonstrate good coding ability by:
+```js
+[
+  {
+    category: "Core Supports",
+    code: 1,
+    initialBudget: 4800,
+    categorySpend: 1380,
+    remainingBudget: 3420,
+  },
+  {
+    category: "Home Care",
+    code: 3,
+    initialBudget: 2400,
+    categorySpend: 618,
+    remainingBudget: 1782,
+  },
+  {
+    category: "transport",
+    code: 15,
+    initialBudget: 1560,
+    categorySpend: 312,
+    remainingBudget: 1248,
+  },
+];
+```
+# Task 2: 
 
-- Knowing your way around your IDE.
-- Debugging and fixing your code as you go.
-- Breaking the problem into small solvable chunks.
-- Writing tests.
+The plan budget is for 12 months.
+The invoices are for January, February and March.
+Create a report to show whether a category is 'overspent', 'underspent' or 'ontrack' for the period of January thru March.
 
-Let's go into this together with an open mind. A good interview is like a frank exchange of ideas, we can both learn something from each other. This is a great opportunity for you to see what it's like to work with us too! There aren't many things that get built here without some collaboration. 😀
+Before you begin, discuss briefly with your interviewers to define the critera for 'overspent', 'underspent' or 'ontrack' spending.
 
-The project installation and actual test instructions are in [TASKS.md](./TASKS.md)
+```js
+[
+  {
+    category: "Core Supports",
+    categorySpend: 1380,
+    code: 1,
+    initialBudget: 4800,
+    remainingBudget: 3420,
+    target: "OVERSPEND",
+  },
+  {
+    category: "Home Care",
+    categorySpend: 618,
+    code: 3,
+    initialBudget: 2400,
+    remainingBudget: 1782,
+    target: "ON_TRACK",
+  },
+  {
+    category: "transport",
+    categorySpend: 312,
+    code: 15,
+    initialBudget: 1560,
+    remainingBudget: 1248,
+    target: "UNDERSPEND",
+  },
+];
+```

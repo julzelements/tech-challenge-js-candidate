@@ -4,7 +4,8 @@
   "description": "tech challenge in js for tshirt ventures",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "dev": "node src/index.js"
   },
   "author": "julian scharf",
   "license": "ISC",
